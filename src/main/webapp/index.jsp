@@ -15,8 +15,8 @@
 <body>
 	
 		<div id="show">
-			<h1 class="titre">BeerWeb</h1>
-			<a class="btn btn-primary mt-3" id="colorlien" href="ListBiere">Cliquez-ici</a>
+			<h1 class="titre">Text</h1>
+			<a class="btn btn-primary mt-3" id="colorlien" href="ListVoiture">Cliquez-ici</a>
 		</div>		
 				
 	

@@ -14,7 +14,7 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Page Bières</title>
+<title>Page Voiture</title>
 </head>
 <body>
 
@@ -25,12 +25,12 @@
 			<p class="invalid">${message}</p>
 		</c:if>
 
-		<form action="BierePage" method="post">
+		<form action="VoiturePage" method="post">
 			<div class="row align-items-center">
 				<div class="col-12 col-md-4">Nom : </div>
 				<div class="col-12 col-md-8">
 					<input type="text" class="form-control" id="nom"
-						placeholder="Saisir un nom" name="nom" value="${biere.biereNom}" required />
+						placeholder="Saisir un nom" name="nom" value="${voiture.voitureNom}" required />
 				</div>
 			</div>
 			<div class="row align-items-center">
@@ -38,74 +38,74 @@
 				<div class="col-12 col-md-8">
 					<input type="text" class="form-control" id="description"
 						placeholder="Saisir une description" name="description"
-						value="${biere.biereDescription}" required />
+						value="${voiture.voitureDescription}" required />
 				</div>
 			</div>
 			<div class="row align-items-center">
 				<div class="col-12 col-md-4">Prix : </div>
 				<div class="col-12 col-md-8">
 					<input type="text" id="prix" name="prix" placeholder="Saisir un prix"
-						class="form-control validate" value="${biere.prix}" required />
+						class="form-control validate" value="${voiture.prix}" required />
 				</div>
 			</div>
 
 			<div class="row align-items-center">
 				<div class="col-12 col-md-4">Mise en marché : </div>
 				<div class="col-12 col-md-8">
-					<input type="text" id="dateCommerce" name="dateCommerce"
+					<input type="text" id="miseAuMarche" name="miseAuMarche"
 						placeholder="date en format : AAAA-MM-JJ" class="form-control validate"
-						value="${biere.dateCommerce}" required />
+						value="${voiture.miseAuMarche}" required />
 				</div>
 			</div>
 			<div class="row align-items-center">
 				<div class="col-12 col-md-4">Pays : </div>
 				<div class="col-12 col-md-8">
 					<input type="text" id="pays" name="pays" placeholder="Saisir un pays"
-						class="form-control validate" value="${biere.pays}" required />
+						class="form-control validate" value="${voiture.pays}" required />
 				</div>
 			</div>
 
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4">Degré d'alcool : </div>
+				<div class="col-12 col-md-4">Carburant : </div>
 				<div class="col-12 col-md-8">
-					<input type="text" id="degree" name="degree"
-						placeholder="Saisir un degré d'alcool" class="form-control validate"
-						value="${biere.degree}" required />
+					<input type="text" id="carburant" name="carburant"
+						placeholder="Saisir un carburant" class="form-control validate"
+						value="${voiture.carburant}" required />
 				</div>
 			</div>
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4">Goût : </div>
+				<div class="col-12 col-md-4">Portes : </div>
 				<div class="col-12 col-md-8">
-					<input type="text" id="gout" name="gout" placeholder="Saisir un goût"
-						class="form-control validate" value="${biere.gout}" required />
+					<input type="text" id="portes" name="portes" placeholder="Saisir un nombre de portes"
+						class="form-control validate" value="${voiture.portes}" required />
 				</div>
 			</div>
 
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4">Couleur : </div>
+				<div class="col-12 col-md-4">Modèle : </div>
 				<div class="col-12 col-md-8">
-					<select name="couleurs" id="couleurs">
-						<c:forEach var="couleur" items="${couleurs}">
-							<option value="${couleur.couleurId}"
-								<c:if test="${couleur.couleurId == biere.couleurId}">
+					<select name="modeles" id="modeles">
+						<c:forEach var="modele" items="${modeles}">
+							<option value="${modele.modeleId}"
+								<c:if test="${modele.modeleId == voiture.modeleId}">
 					selected
-				</c:if>>${couleur.couleurNom}</option>
+				</c:if>>${modele.modeleNom}</option>
 						</c:forEach>
 					</select>
 				</div>
 			</div>
 
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4">Fermentation : </div>
+				<div class="col-12 col-md-4">Marque : </div>
 				<div class="col-12 col-md-8">
 					<fieldset>
-						<c:forEach var="fermentation" items="${fermentations}">
-							<input type="checkbox" id="scales${fermentation.fermentationId}"
-								name="fermentations" value="${fermentation.fermentationId}"
-								<c:if test="${fermentation.checked}">
+						<c:forEach var="marque" items="${marques}">
+							<input type="checkbox" id="scales${marque.marqueId}"
+								name="marques" value="${marque.marqueId}"
+								<c:if test="${marque.checked}">
 					checked
 				</c:if>>
-							<label for="scales${fermentation.fermentationId}">${fermentation.fermentationNom}</label>
+							<label for="scales${marque.marqueId}">${marque.marqueNom}</label>
 						</c:forEach>
 					</fieldset>
 
@@ -117,7 +117,7 @@
 					<button type="submit" class="btn btn-primary mt-3">Modifier</button>
 				</div>
 				<div class="col-12 col-md-5">
-					<a class="btn btn-primary mt-3" href="ListBiere">Retour</a>
+					<a class="btn btn-primary mt-3" href="ListVoiture">Retour</a>
 				</div>
 			</div>
 

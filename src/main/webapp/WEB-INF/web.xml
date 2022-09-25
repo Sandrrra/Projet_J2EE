@@ -2,49 +2,56 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
   <servlet>
     <description></description>
-    <display-name>ListBiere</display-name>
-    <servlet-name>ListBiere</servlet-name>
-    <servlet-class>routing.ListBiere</servlet-class>
+    <display-name>ListVoiture</display-name>
+    <servlet-name>ListVoiture</servlet-name>
+    <servlet-class>routing.ListVoiture</servlet-class>
   </servlet>
- 	 <error-page>
-        <location>/error.jsp</location>
-    </error-page>
   <servlet-mapping>
-    <servlet-name>ListBiere</servlet-name>
-    <url-pattern>/ListBiere</url-pattern>
+    <servlet-name>ListVoiture</servlet-name>
+    <url-pattern>/ListVoiture</url-pattern>
   </servlet-mapping>
-  <display-name>BeerWeb</display-name>
+  <display-name>CarWeb</display-name>
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>BierePage</display-name>
-    <servlet-name>BierePage</servlet-name>
-    <servlet-class>routing.BierePage</servlet-class>
+    <display-name>VoiturePage</display-name>
+    <servlet-name>VoiturePage</servlet-name>
+    <servlet-class>routing.VoiturePage</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>BierePage</servlet-name>
-    <url-pattern>/BierePage</url-pattern>
+    <servlet-name>VoiturePage</servlet-name>
+    <url-pattern>/VoiturePage</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>NewCouleur</display-name>
-    <servlet-name>NewCouleur</servlet-name>
-    <servlet-class>routing.NewCouleur</servlet-class>
+    <display-name>NewModele</display-name>
+    <servlet-name>NewModele</servlet-name>
+    <servlet-class>routing.NewModele</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>NewCouleur</servlet-name>
-    <url-pattern>/NewCouleur</url-pattern>
+    <servlet-name>NewModele</servlet-name>
+    <url-pattern>/NewModele</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>NewFermentation</display-name>
-    <servlet-name>NewFermentation</servlet-name>
-    <servlet-class>routing.NewFermentation</servlet-class>
+    <display-name>NewMarque</display-name>
+    <servlet-name>NewMarque</servlet-name>
+    <servlet-class>routing.NewMarque</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>NewFermentation</servlet-name>
-    <url-pattern>/NewFermentation</url-pattern>
+    <servlet-name>NewMarque</servlet-name>
+    <url-pattern>/NewMarque</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>sx</display-name>
+    <servlet-name>sx</servlet-name>
+    <servlet-class>routing.sx</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sx</servlet-name>
+    <url-pattern>/sx</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -13,24 +13,24 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Couleur Bière</title>
+<title>Modèle Voiture</title>
 </head>
 <body>
 
 
 <div class="container text-white" id="creabeer">	
-<h2>Couleur</h2>
+<h2>Modèle</h2>
 <c:if test="${not empty message}">
 <p class="invalid">${message}</p>
 </c:if>
 
-  <form action="NewCouleur" method="post">
+  <form action="NewModele" method="post">
   	<div class="row align-items-center">
 		<div class="col-12 col-md-3">Titre</div>
 		<div class="col-12 col-md-9">
 		<input type="text" class="form-control" id="nom"
 			placeholder="Saisir nom" name="nom"
-			value="${couleur.couleurNom}" required />
+			value="${modele.modeleNom}" required />
 		</div>
 	</div>
  	<div class="row align-items-center">
@@ -38,7 +38,7 @@
 		<div class="col-12 col-md-9">	
 		<input type="text" class="form-control" id="description"
 			placeholder="Saisi description" name="description" 
-			value="${couleur.couleurDescription}" required />
+			value="${modele.modeleDescription}" required />
 		</div>
 	</div>
 	
@@ -47,7 +47,7 @@
 			<button type="submit" class="btn btn-primary mt-3">Add/Update</button>
 		</div>
 		<div class="col-12 col-md-4">		
-			<a class="btn btn-primary mt-3" href="ListBiere">Retour</a>
+			<a class="btn btn-primary mt-3" href="ListVoiture">Retour</a>
 		</div>
 	</div>
   </form>

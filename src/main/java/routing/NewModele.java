@@ -3,25 +3,25 @@ package routing;
 import java.io.IOException;
 import java.sql.SQLException;
 
-import dataaccess.CouleurDAO;
-import dataaccess.FermentationDAO;
+import dataaccess.ModeleDAO;
+import dataaccess.MarqueDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.Couleur;
+import model.Modele;
 
 /**
- * Servlet implementation class NewGenre
+ * Servlet implementation class NewModele
  */
-public class NewCouleur extends HttpServlet {
+public class NewModele extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public NewCouleur() {
+	public NewModele() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,24 +33,24 @@ public class NewCouleur extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String message = "";
-		String couleurId = request.getParameter("couleurId");
-		Couleur couleur = null;
+		String modeleId = request.getParameter("modeleId");
+		Modele modele = null;
 
-		if (couleurId == null) {
-			couleur = new Couleur();
+		if (modeleId == null) {
+			modele = new Modele();
 		} else {
 			try {
-				couleur = CouleurDAO.getCouleurById(Integer.parseInt(couleurId));
+				modele = ModeleDAO.getModeleById(Integer.parseInt(modeleId));
 			} catch (Exception e) {
-				message = "oops";
+				message = ">Erreur";
 			}
 		}
 
 		request.setAttribute("message", message);
 		HttpSession session = request.getSession();
-		// Put genre in the request for the next page
-		session.setAttribute("couleur", couleur);
-		getServletContext().getRequestDispatcher("/WEB-INF/newcouleur.jsp").forward(request, response);
+		// Put modele in the request for the next page
+		session.setAttribute("modele", modele);
+		getServletContext().getRequestDispatcher("/WEB-INF/newmodele.jsp").forward(request, response);
 	}
 
 	/**
@@ -61,25 +61,25 @@ public class NewCouleur extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String message = "";
-		Couleur couleur = (Couleur) session.getAttribute("couleur");
-		couleur.setCouleurNom(request.getParameter("nom"));
-		couleur.setCouleurDescription(request.getParameter("description"));
+		Modele modele = (Modele) session.getAttribute("modele");
+		modele.setModeleNom(request.getParameter("nom"));
+		modele.setModeleDescription(request.getParameter("description"));
 
 		try {
-			if (couleur.getCouleurId() > 0) {
+			if (modele.getModeleId() > 0) {
 				// already exists so do an update
-				CouleurDAO.updateCouleur(couleur);
-				message = "Couleur updated";
+				ModeleDAO.updateModele(modele);
+				message = "Modèle updated";
 			} else {
-				CouleurDAO.insertCouleur(couleur);
-				message = "Couleur created";
+				ModeleDAO.insertModele(modele);
+				message = "Modèle created";
 			}
 		} catch (SQLException e) {
-			message = "Enter a new name.";
+			message = "Entrez un nouveau nom.";
 		}
 
 		request.setAttribute("message", message);
-		session.setAttribute("couleur", couleur);
-		getServletContext().getRequestDispatcher("/WEB-INF/newcouleur.jsp").forward(request, response);
+		session.setAttribute("modele", modele);
+		getServletContext().getRequestDispatcher("/WEB-INF/newmodele.jsp").forward(request, response);
 	}
 }

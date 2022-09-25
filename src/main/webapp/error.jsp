@@ -16,7 +16,7 @@
 <div class="container bg-dark text-white" id="show">
 <h1 class="titre">Erreur</h1>
 	
-			<a class="btn btn-primary mt-3" href="ListBiere">Retour</a>
+			<a class="btn btn-primary mt-3" href="ListVoiture">Retour</a>
 		
 </div>
 </body>
