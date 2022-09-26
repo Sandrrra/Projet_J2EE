@@ -37,18 +37,18 @@
 				</c:forEach>
 				<option value="new">Ajouter un modèle</option>
 			</select> 
-			
+			<br>
 			<label for="marque">Choisir/créer une marque : </label>
 			<select name="marque" id="marque">
 				<option value="all">Toutes les marques</option>
 				<c:forEach var="marque" items="${marque}">
 				<option value="${marque.marqueId}"
-					<c:if test="${not empty selectedMarque and marque.marqueId == selectedmarque}">
+					<c:if test="${not empty selectedMarque and marque.marqueId == selectedMarque}">
 					selected
 					</c:if>
 					>${marque.marqueNom}</option>			
 				</c:forEach>
-				<option value="new">Ajouter une marque</option>
+				<option value="new">Ajouter une société</option>
 			</select> 			
 		
 			<input type="submit" value="Envoyer">
@@ -65,7 +65,7 @@
 					<th>Voiture</th>
 					<th>Description</th>
 					<th>Modèle</th>
-					<th>Marque</th>
+					<th>Société</th>
 				</tr>
 			</thead>
 			<tbody>

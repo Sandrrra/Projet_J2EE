@@ -28,8 +28,8 @@
   	<div class="row align-items-center">
 		<div class="col-12 col-md-3">Nom</div>
 		<div class="col-12 col-md-9">
-		<input type="text" class="form-control" id="marque"
-			placeholder="Saisir marque" name="marque"
+		<input type="text" class="form-control" id="nom"
+			placeholder="Saisir marque" name="nom"
 			value="${marque.marqueNom}" required />
 		</div>
 	</div>

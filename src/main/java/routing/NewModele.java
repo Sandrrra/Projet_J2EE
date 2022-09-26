@@ -42,7 +42,7 @@ public class NewModele extends HttpServlet {
 			try {
 				modele = ModeleDAO.getModeleById(Integer.parseInt(modeleId));
 			} catch (Exception e) {
-				message = ">Erreur";
+				message = "Erreur";
 			}
 		}
 

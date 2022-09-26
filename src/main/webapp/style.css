@@ -1,29 +1,28 @@
 @charset "UTF-8";
 body    {
 
-      background-image: url("Rio.jpg");
-      background-repeat:repeat-y;
+      background-image: url("MicrosoftTeams-image.png");
+     
       background-size: 100%;
 }
 .colorlist	{
-	color:chartreuse;
+	color:white;
 	text-align:center;
 }
 .colorlist a	{
 	text-align:center;
 }
 .colorlist:hover	{
-		color:white !important;
+		color:#c0c0c0!important;
 }
 .btn-primary	{
-	background-color:chartreuse !important;
+	background-color:#c0c0c0!important;
 	border-color:black!important;
-	color:black !important;
+	color:black!important;
 }
 #creabeer	{
 	max-width:700px;
 	background: rgba(51, 170, 51, .3);
-	text-shadow: 0em 0em 0.1em #333;
 	font-size:1.2em;
 }
 .col-12.col-md-4	{
@@ -32,40 +31,38 @@ body    {
 
 #container    {
 	padding-bottom:1.2em;
-  	background: rgba(51, 170, 51, .3);
+  	background: rgba(255, 255, 255, .3);
     border-radius:0 0 2em 2em;
     display: flex;
     justify-content: space-beetwen;
     flex-direction: column;
 }
 #container .btn-primary	{
-	width:150px;
-	margin:auto;
+	width:250px;
+	margin:1em, 0, 0, 0;
 	border-color:black!important;
 }
 #container .btn-primary:hover	{
 	opacity:0.6;
 }
 form label {
-	color:white;
-	text-shadow: 0em 0em 0.1em #333;
+	color:black;
 	font-size:1.2em;
 }
 form label select {
-	color:white;
-	text-shadow: 0em 0em 0.1em #333;
+	color:black;
 	font-size:1.2em;
 }
 
 .titre	{
-	color:white;
+	color:black;
 	margin:1em;
 	font-weight:700;
-	text-shadow: 0em 0em 0.1em #333;
 }
 td	{
 	padding: 0.5em 1em 0.5em 1em;
 	background: rgba(0, 0, 0, .5);
+	text-align:center;
 	/*border-radius:2em 2em 2em 2em;*/
 }
 #container td a {
@@ -78,28 +75,31 @@ th	{
 	
 	font-size: 1.7em;
 	padding-top:1em;
-	color:white;
-	text-shadow: 0em 0em 0.1em #333;
+	background: rgba(255, 255, 255, .5);
+	color:black;
+	border-width:2em;
+	border-color:transparent;
 	padding:auto;
 }
 row	{
 	margin-top:1em;
+	text-align:center;
 }
 #show	{
  
   height:200px;
-  width:400px;
+  width:700px;
   margin:auto;
   background-color:black;
   text-align:center;
   font-size:5em;
-  color:chartreuse;
+  color:white;
   display:flex;
   flex-direction : column;
   align-content:space-around;
   justify-content:space-beetwen;
-  opacity:0.9;
-  border-radius:0 0 2em 2em;
+  opacity:0.66;
+  
  }
  #show .btn-primary	{
 	width:100px;

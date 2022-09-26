@@ -30,7 +30,7 @@ public class VoitureDAO {
 	}
 
 	public static List<Voiture> getVoitureByMarque(int marqueId) throws SQLException {
-		Optional<String> whereClause = Optional.ofNullable("where voituremarque.marque = ?");
+		Optional<String> whereClause = Optional.ofNullable("where voituremarque.marque_id = ?");
 		return getVoiture(whereClause, Optional.empty(), Optional.ofNullable(marqueId));
 	}
 
