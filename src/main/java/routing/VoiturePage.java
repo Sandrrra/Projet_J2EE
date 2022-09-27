@@ -82,7 +82,7 @@ public class VoiturePage extends HttpServlet {
 			double prix = Double.parseDouble(request.getParameter("prix"));
 			voiture.setPrix(prix);
 		} catch (NumberFormatException e) {
-			message = "Entrez un prix valide";
+			message = "<p style=\"color:#FF0000\";>Entrez un prix valide</p>";
 		}
 
 		try {
@@ -91,22 +91,22 @@ public class VoiturePage extends HttpServlet {
 			Date date = Date.valueOf(miseAuMarche);
 			voiture.setMiseAuMarche(date);
 		} catch (java.time.format.DateTimeParseException e) {
-			message = "Entrez une date au format AAAA-MM-JJ";
+			message = "<p style=\"color:#FF0000\";>Entrez une date au format AAAA-MM-JJ</p>";
 		}
 
 		VoitureDAO dao = new VoitureDAO();
 
 		if (voiture.getVoitureNom().isBlank() ||
 				voiture.getVoitureDescription().isBlank()) {
-			message = "Vous devez remplir tout les champs";
+			message = "<p style=\"color:#FF0000\";>Vous devez remplir tout les champs</p>";
 		} else {
 			try {
 				if (voiture.getVoitureId() == 0) {
 					dao.insertVoiture(voiture);
-					message = "Voiture ajoutée.";
+					message = "<p style=\"color:#FF0000\";>Voiture ajoutée.</p>";
 				} else {
 					dao.updateVoiture(voiture);
-					message = "Voiture mise à jour.";
+					message = "<p style=\"color:#FF0000\";>Voiture mise à jour.</p>";
 				}
 
 				String[] marque = request.getParameterValues("marques");
@@ -116,7 +116,7 @@ public class VoiturePage extends HttpServlet {
 				}
 				session.setAttribute("marques", MarqueDAO.getVoitureMarque(voiture.getVoitureId()));
 			} catch (SQLException e) {
-				message = "Il y a une erreur.";
+				message = "<p style=\"color:#FF0000\";>Il y a une erreur.</p>";
 			}
 		}
 		session.setAttribute("voiture", voiture);

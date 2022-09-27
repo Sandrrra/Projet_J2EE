@@ -15,7 +15,7 @@
 <body>
 	
 		<div id="show">
-			<h1 class="titre">Text</h1>
+			<h1 class="titre">Just a Car</h1>
 			<a class="btn btn-primary mt-3" id="colorlien" href="ListVoiture">Cliquez-ici</a>
 		</div>		
 				

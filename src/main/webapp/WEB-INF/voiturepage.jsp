@@ -96,7 +96,7 @@
 			</div>
 
 			<div class="row align-items-center">
-				<div class="col-12 col-md-4">Marque : </div>
+				<div class="col-12 col-md-4">Société : </div>
 				<div class="col-12 col-md-8">
 					<fieldset>
 						<c:forEach var="marque" items="${marques}">

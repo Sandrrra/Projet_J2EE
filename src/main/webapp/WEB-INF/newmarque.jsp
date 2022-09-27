@@ -13,13 +13,13 @@
 	crossorigin="anonymous">
 
 <meta charset="UTF-8">
-<title>Marque Voiture</title>
+<title>Société Voiture</title>
 </head>
 <body>
 
 
 <div class="container text-white" id="creabeer">	
-<h2>Marque</h2>
+<h2>Société</h2>
 <c:if test="${not empty message}">
 <p class="invalid">${message}</p>
 </c:if>
@@ -29,12 +29,12 @@
 		<div class="col-12 col-md-3">Nom</div>
 		<div class="col-12 col-md-9">
 		<input type="text" class="form-control" id="nom"
-			placeholder="Saisir marque" name="nom"
+			placeholder="Saisir nom" name="nom"
 			value="${marque.marqueNom}" required />
 		</div>
 	</div>
  	<div class="row align-items-center">
-		<div class="col-12 col-md-3">Marque</div>
+		<div class="col-12 col-md-3">Description</div>
 		<div class="col-12 col-md-9">	
 		<input type="text" class="form-control" id="description"
 			placeholder="Saisir description" name="description" 

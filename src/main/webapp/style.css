@@ -2,8 +2,10 @@
 body    {
 
       background-image: url("MicrosoftTeams-image.png");
-     
-      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
 }
 .colorlist	{
 	color:white;
@@ -22,11 +24,16 @@ body    {
 }
 #creabeer	{
 	max-width:700px;
-	background: rgba(51, 170, 51, .3);
-	font-size:1.2em;
+	background: rgba(255, 255, 255, .3);
+	font-size:1em;
 }
 .col-12.col-md-4	{
 	text-align:right;
+	color:white;
+	background-color:rgba(0, 0, 0, .4);
+}
+.col-12.col-md-4:last-child	{
+	background-color:transparent;
 }
 
 #container    {
@@ -55,7 +62,7 @@ form label select {
 }
 
 .titre	{
-	color:black;
+	color:white;
 	margin:1em;
 	font-weight:700;
 }
@@ -84,6 +91,7 @@ th	{
 row	{
 	margin-top:1em;
 	text-align:center;
+	background-color: transparent;
 }
 #show	{
  
@@ -93,7 +101,7 @@ row	{
   background-color:black;
   text-align:center;
   font-size:5em;
-  color:white;
+  color:black;
   display:flex;
   flex-direction : column;
   align-content:space-around;
@@ -110,3 +118,10 @@ row	{
 	width:100px;
   	margin:auto;
  }
+ @media screen and (max-width: 470px)
+{
+    /* Rédigez vos propriétés CSS ici */
+    th{
+    display:none;
+    }
+}
